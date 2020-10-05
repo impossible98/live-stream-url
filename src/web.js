@@ -4,6 +4,7 @@ const path = require('path');
 const url = require('url');
 
 
+const port = 9999;
 // http.createServer((request, response) => {
 // 	//解析请求，包括文件名
 // 	let pathname = url.parse(request.url).pathname;
@@ -45,10 +46,11 @@ const url = require('url');
 
 http.createServer(function (request, response) {
 	let uri = url.parse(request.url).pathname;
-	console.log("Request for " + uri + "  received.");
 	let filename = path.join(__dirname, uri);
 
-	var extname = path.extname(filename);
+	console.log("Request for dist" + uri + "  received.");
+
+	let extname = path.extname(filename);
 	var contentType = "text/html";
 	switch (extname) {
 		case ".js":
@@ -87,7 +89,6 @@ http.createServer(function (request, response) {
 			response.end();
 		});
 	});
-})
-	.listen(9999);
+}).listen(port);
 
-console.log('Server is running on http://localhost:' + '9999');
+console.log('Server is running on http://localhost:' + port);

@@ -10,5 +10,7 @@ let dp = new DPlayer({
 function myFunction() {
 	let txt = document.getElementById('roomId').innerHTML;
 
+	console.log(txt);
 	return txt;
 }
+
