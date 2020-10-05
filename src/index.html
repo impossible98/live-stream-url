@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="url">Please input the url or room id:
+        <input type="url" name="url" id="url" placeholder="https://example.com" pattern="https://.*" size="30"
+            required="">
+    </label>
+
+    <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+        <input type="range" name="b" value="50"> +
+        <input type="number" name="a" value="10"> =
+        <br>
+        <output id="demo" name="result">60</output>
+        <button onclick="myFunction()">点我</button>
+        <script>
+            function myFunction() {
+                let str = document.getElementById('demo').innerHTML;
+                let txt = str.replace('60', 'aaaaa');
+                document.getElementById('demo').innerHTML = txt;
+            }
+        </script>
+    </form>
+
+    <div id="dplayer"></div>
+    <script src="hls.min.js"></script>
+    <script src="DPlayer.min.js"></script>
+    <script>
+        const dp = new DPlayer({
+            autoplay: true,
+            container: document.getElementById('dplayer'),
+            video: {
+                url: 'https://txdirect.hls.huya.com/huyalive/1374256723-1374256723-5902387681593131008-2748636902-10057-A-0-1.m3u8?wsSecret=5b6ec48a3709ad56d05b7285f42da801&wsTime=5f7c054f&u=0&seqid=16018769436960000&ctype=tars_mobile&fs=bgct&t=103',
+            },
+        });
+    </script>
+</body>
+
+</html>

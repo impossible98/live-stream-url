@@ -1,0 +1,16 @@
+{
+  "name": "live-stream-url",
+  "version": "0.0.1",
+  "description": "",
+  "main": "DPlayer.min.js",
+  "dependencies": {
+    "dplayer": "^1.26.0",
+    "hls.js": "^0.14.13"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "impossible98",
+  "license": "MIT"
+}
